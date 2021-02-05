@@ -65,6 +65,15 @@ public class ListOfMap1 {
 
            }
         }
+        System.out.println("=========================================");
+
+        //print all the developers names
+        for(int i =0; i<= listOfMaps.size()-1; i++){
+            Map<String,String> eachMap = listOfMaps.get(i);
+            for(String eachKey : eachMap.keySet()){
+
+            }
+        }
 
 
     }
