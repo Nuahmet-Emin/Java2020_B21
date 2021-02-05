@@ -48,5 +48,106 @@ public class ListOfMap2 {
                 System.out.println(eachName);
             }
         }
+
+        System.out.println("===================================");
+        String[] modelOfToyota = {"Camry","Rav4","Corolla","Land Cruiser"};
+        Integer[] yearOfToyota = {2001, 2011, 1961, 2021};
+
+        String[] modelOfBMW = {"M1","M3","M5","X5","X6"};
+        Integer[] yearOfBMW = {1995, 2005, 2015, 2020,2012};
+
+        String[] modelOfMercedes = {"C-Class","A-Class","SLS","GLC"};
+        Integer[] yearOfMercedes = {1990, 1995, 2015, 2021};
+
+        List<Map<String, Integer>> carCollection = new ArrayList<>();
+        carCollection.addAll(
+                Arrays.asList(
+                        new TreeMap<>(), // mercedes
+                        new TreeMap<>(), // toyota
+                        new TreeMap<>() // bmw
+                )
+        );
+        for(int i=0; i<= modelOfToyota.length-1; i++){
+            carCollection.get(0).put(modelOfToyota[i], yearOfToyota[i]);
+        }
+
+        for(int i=0; i<= modelOfMercedes.length-1 ; i++){
+            carCollection.get(1).put(modelOfMercedes[i],yearOfMercedes[i]);
+        }
+
+        for(int i=0; i<= modelOfBMW.length-1 ; i++){
+            carCollection.get(2).put(modelOfBMW[i],yearOfBMW[i]);
+        }
+
+        System.out.println(carCollection);
+
+        for (int i=0; i< carCollection.size(); i++) {
+            Map<String, Integer> eachMap = carCollection.get(i);
+            for (Map.Entry<String, Integer> eachPair : eachMap.entrySet()) {
+                int year = eachPair.getValue();
+                if(i==0){ // toyota
+                    if(year>= 1960 && year <= 1970){
+                        System.out.println(eachPair);
+                    }
+                }else if(i == 1){ // Mercedes
+                    if(year >= 1990 && year <= 1998){
+                        System.out.println(eachPair);
+
+                    }
+                }else if(i == 2){ // BMW
+                    if(year >= 2011 && year <= 2015){
+                        System.out.println(eachPair);
+                    }
+                }
+
+            }
+        }
+
+
+        System.out.println("==============================================");
+
+       /* for(Map.Entry<String, Integer> eachCar : carCollection.get(0).entrySet()){
+            String model = eachCar.getKey();
+            Integer year = eachCar.getValue();
+
+            if(year >= 1960 && year <= 1970){
+                System.out.println("Your Toyota model: " + model +" ," + year+ " is eligible to recall");
+            }
+        }
+
+
+        for(Map.Entry<String, Integer> eachCar : carCollection.get(1).entrySet()){
+            String model = eachCar.getKey();
+            Integer year = eachCar.getValue();
+
+            if(year >= 1990 && year <= 1998){
+                System.out.println("Your Mercedes model: " + model +" ," + year+ " is eligible to recall");
+            }
+        }
+
+        for(Map.Entry<String, Integer> eachCar : carCollection.get(2).entrySet()){
+            String model = eachCar.getKey();
+            Integer year = eachCar.getValue();
+
+            if(year >= 2011 && year <= 2015){
+                System.out.println("Your BMW model: " + model +" ," + year+ " is eligible to recall");
+            }
+        }*/
+
+
+        /*
+        eligible to recall:
+             BMW :
+                  2011-2015
+             Mercedes:
+                  1990- 1998
+             Toyota:
+                  1960-1970
+
+         */
+
+
+
+
     }
 }
