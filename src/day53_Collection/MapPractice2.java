@@ -1,7 +1,11 @@
 package day53_Collection;
 
+import java.util.TreeMap;
+
 public class MapPractice2 {
     public static void main(String[] args) {
+
+        TreeMap<String,Integer> scores = new TreeMap<>();
 
 
 
