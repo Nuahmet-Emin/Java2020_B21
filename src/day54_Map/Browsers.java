@@ -15,3 +15,7 @@ enum DaysInWeek{
 enum ComputerOS{
     MacOS, Windows, Linux
 }
+
+enum Priority{
+    Low, Medium, High
+}

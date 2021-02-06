@@ -31,6 +31,29 @@ public class TestEnums {
 
         ComputerOS os = ComputerOS.MacOS;
 
+        Priority priorityLevel = Priority.Low;
+        System.out.println(priorityLevel);
+
+
+        System.out.println("======================");
+
+        // String : immutable, string pool
+
+        // StringBuilder : mutable , not synchronized
+
+        // StringBuffer : mutable, synchronized ==> thread safe
+
+        String string = "Cybertek";
+        string.concat(" School"); // "Cybertek School" will be collected by GC
+
+        System.out.println(string); // "Cybertek"
+
+        StringBuilder stringBuilder = new StringBuilder("Cybertek");
+        stringBuilder.append(" School");
+        stringBuilder.reverse();
+
+        System.out.println(stringBuilder);
 
     }
+
 }
