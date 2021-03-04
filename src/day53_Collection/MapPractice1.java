@@ -10,7 +10,7 @@ public class MapPractice1 {
     public static void main(String[] args) {
         Map<String, Double > employeeInfo= new LinkedHashMap<>();
         employeeInfo.put("Afrooz",120000.0);
-        employeeInfo.put("Athan", 120000.0);
+        employeeInfo.put("Ayse", 120000.0);
         employeeInfo.put("Ayse",110000.0);
 
 

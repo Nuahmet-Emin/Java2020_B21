@@ -8,6 +8,7 @@ public class ShapeObject {
         Rectangle rectangle = new Rectangle(4,5 );
         Square square = new Square(3);
 
+
         System.out.println(circle);
         System.out.println(rectangle);
         System.out.println(square);

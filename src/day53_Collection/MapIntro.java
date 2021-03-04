@@ -16,6 +16,11 @@ public class MapIntro {
 
         Map<String, String> credentials4 = new Hashtable<>(); // is synchronized, thread-safe
 
+         Map a = new HashMap<>();
+         List b = new ArrayList();
+         b.add("a");
+        System.out.println(b);
+
 
 
 

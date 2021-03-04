@@ -1,5 +1,7 @@
 package day49_Abstraction.RemoteDriverTask;
 
 public interface JavaScriptExecuter {
-    void executeScript(String script);
+   public void executeScript(String script);
+
+
 }

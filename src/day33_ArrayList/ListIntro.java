@@ -7,6 +7,7 @@ public class ListIntro {
 
         ArrayList<Integer> scores = new ArrayList<>();
 
+
         scores.add(100); //auto boxing 0
         scores.add(200); // auto boxing 1
         scores.add(300); // auto boxing 2

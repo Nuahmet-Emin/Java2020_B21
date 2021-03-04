@@ -14,6 +14,8 @@ public interface InterfaceRules {
     public default void m(){
 
     }
+
+
 }
 /*
 Interface: Cannot have objects
