@@ -22,8 +22,8 @@ public class Uniques_Duplicates {
                map2.put(each,1);
            }
         }
-
-
+        System.out.println(map);
+        System.out.println(map2);
     }
 }
 /*
