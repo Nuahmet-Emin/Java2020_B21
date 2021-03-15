@@ -1,10 +1,13 @@
 package JavaInterview;
 
+import java.util.*;
+
 public class FrequencyOfCharacters {
 
     public static void main(String[] args) {
         String str = "AAABBCDD";
         System.out.println(FrequencyOfChars(str));
+        System.out.println( FrequencyOfChars2(str));
     }
 
     public static String FrequencyOfChars(String str){
@@ -21,16 +24,7 @@ public class FrequencyOfCharacters {
 
         System.out.println(nonDup);
 
-//        for( int j=0;j < nonDup.length(); j++) {
-//            int count = 0;
-//            for(int i=0; i < str.length(); i++) {
-//                if(str.charAt(i) == nonDup.charAt(j))
-//                    count++;
-//            }
-//
-//            result +=nonDup.charAt(j)+"" + count;
-//
-//        }
+
         for(int i=0; i<= nonDup.length()-1; i++){
             int count = 0;
             for(int j=0; j<=str.length()-1; j++){
@@ -40,6 +34,22 @@ public class FrequencyOfCharacters {
             }
             result +=  nonDup.charAt(i)+ "" + count;
         }
+
+        return result;
+    }
+
+    public static String FrequencyOfChars2(String str) {
+         String result = "";
+
+        ArrayList <String> list = new ArrayList<>(Arrays.asList(str.split(""))) ;
+        for(String each : new LinkedHashSet<>(Arrays.asList(str.split("")))){
+            result += each + Collections.frequency(list,each);
+        }
+        return result;
+    }
+
+    public static String FrequencyOfChars3(String str){
+        String result = "";
 
         return result;
     }
