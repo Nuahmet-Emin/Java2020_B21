@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class ShapeObjects {
     public static void main(String[] args) {
-        Circle circle = new Circle(23);
+        Circle circle = new Circle(5);
         Rectangle rectangle = new Rectangle(10,20);
         Cube cube = new Cube(10);
         Cylinder cylinder = new Cylinder(2,5);
